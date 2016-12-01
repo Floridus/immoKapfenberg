@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/name"
+        android:layout_alignStart="@+id/nameInput"
         android:layout_marginTop="68dp"
         android:id="@+id/contact"
         android:textSize="24sp" />
@@ -30,16 +30,33 @@
         android:layout_alignStart="@+id/contact"
         android:id="@+id/number" />
 
+    <TextView
+        android:text="@string/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number"
+        android:layout_alignStart="@+id/nameInput"
+        android:layout_marginTop="12dp"
+        android:id="@+id/name" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="@string/contact_name"
+        android:hint="@string/contact_name"
         android:ems="10"
         android:layout_marginTop="144dp"
-        android:id="@+id/name"
+        android:id="@+id/nameInput"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/email" />
+        android:layout_alignStart="@+id/emailInput" />
+
+    <TextView
+        android:text="@string/contact_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameInput"
+        android:layout_alignStart="@+id/emailInput"
+        android:id="@+id/email" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -47,31 +64,47 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:layout_marginStart="17dp"
-        android:id="@+id/email"
+        android:id="@+id/emailInput"
         android:layout_marginTop="17dp"
-        android:text="@string/contact_email"
-        android:layout_below="@+id/name"
+        android:hint="@string/contact_email"
+        android:layout_below="@+id/nameInput"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/contact_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailInput"
+        android:layout_alignStart="@+id/subjectInput"
+        android:id="@+id/subject" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="@string/contact_subject"
+        android:hint="@string/contact_subject"
         android:ems="10"
-        android:id="@+id/subject"
+        android:id="@+id/subjectInput"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/email" />
+        android:layout_alignStart="@+id/emailInput" />
+
+    <TextView
+        android:text="@string/contact_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subjectInput"
+        android:layout_alignStart="@+id/subjectInput"
+        android:id="@+id/info" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/info"
-        android:text="@string/contact_info"
-        android:layout_below="@+id/subject"
-        android:layout_alignStart="@+id/subject"
+        android:id="@+id/infoInput"
+        android:hint="@string/contact_info"
+        android:layout_below="@+id/subjectInput"
+        android:layout_alignStart="@+id/subjectInput"
         android:layout_marginTop="18dp" />
 
     <Button
@@ -81,14 +114,14 @@
         android:id="@+id/cancel"
         android:layout_alignBaseline="@+id/send"
         android:layout_alignBottom="@+id/send"
-        android:layout_alignStart="@+id/info" />
+        android:layout_alignStart="@+id/infoInput" />
 
     <Button
         android:text="@string/send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/send"
-        android:layout_below="@+id/info"
+        android:layout_below="@+id/infoInput"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="49dp" />
 
