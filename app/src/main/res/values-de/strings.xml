@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ImmoKapfenberg</string>
+
+    <string name="contact_title">Kontakt</string>
+    <string name="contact_number">0664 12345678</string>
+    <string name="contact_name">Name</string>
+    <string name="contact_email">E-Mail</string>
+    <string name="contact_subject">Betreff</string>
+    <string name="contact_info">Weitere Informationen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="send">Senden</string>
+</resources>
