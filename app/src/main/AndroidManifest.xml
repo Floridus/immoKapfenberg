@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Contact"></activity>
+        <activity android:name=".OneViewActivity"></activity>
     </application>
 
 </manifest>

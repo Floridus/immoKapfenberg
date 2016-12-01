@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<String> mAdapter;
 
     private Intent contactIntent;
+    private Intent oneViewIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,18 +36,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mDrawerList = (ListView)findViewById(R.id.navList);
-        addDrawerItems();
+        listView = (ListView)findViewById(R.id.immoList);
 
         menuButton = (ImageView)findViewById(R.id.menuButton);
-
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDrawerList.setVisibility(View.VISIBLE);
-                Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
+                if (mDrawerList.getVisibility() == View.VISIBLE) {
+                    mDrawerList.setVisibility(View.INVISIBLE);
+                } else if (mDrawerList.getVisibility() == View.INVISIBLE) {
+                    mDrawerList.setVisibility(View.VISIBLE);
+                }
             }
         });
 
+        contactIntent = new Intent(this, Contact.class);
+        oneViewIntent = new Intent(this, OneViewActivity.class);
+
+        addSubMenuItems();
+        addItemList();
+    }
+
+    private void addItemList() {
         String[] items = {
                 "High-Tech-Park Kapfenberg",
                 "Schmiedgasse 2",
@@ -59,16 +70,21 @@ public class MainActivity extends AppCompatActivity {
                 R.mipmap.img_linke_muerzzeile
         };
 
-        listView = (ListView)findViewById(R.id.immoList);
-
         adapter = new CustomListAdapter(this, items, imageId);
 
         listView.setAdapter(adapter);
 
-        contactIntent = new Intent(this, Contact.class);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                oneViewIntent.putExtra("immoIndex", position);
+
+                startActivity(oneViewIntent);
+            }
+        });
     }
 
-    private void addDrawerItems() {
+    private void addSubMenuItems() {
         final String[] menuItems = { "Alle Immobilien", "Merkliste", "Initiative", "Förderung", "Kontakt" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menuItems);
         mDrawerList.setAdapter(mAdapter);
@@ -76,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 1) {
+                if (position == 0) {
                     mDrawerList.setVisibility(View.INVISIBLE);
                 } else if (position == 4) {
                     startActivity(contactIntent);
