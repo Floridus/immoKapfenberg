@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".Contact" />
         <activity android:name=".OneViewActivity" />
-        <activity android:name=".Initiative"></activity>
+        <activity android:name=".Initiative" />
+        <activity android:name=".Funding"></activity>
     </application>
 
 </manifest>

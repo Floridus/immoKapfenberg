@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Intent contactIntent;
     private Intent oneViewIntent;
+    private Intent initiativeIntent;
+    private Intent fundingIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
         contactIntent = new Intent(this, Contact.class);
         oneViewIntent = new Intent(this, OneViewActivity.class);
+        initiativeIntent = new Intent(this, Initiative.class);
+        fundingIntent = new Intent(this, Funding.class);
 
         addSubMenuItems();
         addItemList();
@@ -94,6 +98,10 @@ public class MainActivity extends AppCompatActivity {
                     mDrawerList.setVisibility(View.INVISIBLE);
                 } else if (position == 4) {
                     startActivity(contactIntent);
+                } else if (position == 2){
+                    startActivity(initiativeIntent);
+                } else if (position == 3){
+                    startActivity(fundingIntent);
                 }
 
                 // position oder id ist Index von menuItems Array
