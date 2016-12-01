@@ -15,8 +15,8 @@
         android:layout_marginTop="90dp"
         android:id="@+id/textView5"
         android:elegantTextHeight="false"
-        android:width="190dp"
-        android:textSize="30dp"
+        android:width="210dp"
+        android:textSize="35dp"
         />
 
     <ImageView
@@ -40,7 +40,7 @@
         android:layout_marginStart="0dp"
         android:id="@+id/Informationen"
         android:layout_alignEnd="@+id/imageView"
-        android:textSize="25dp"/>
+        android:textSize="30dp"/>
     <TextView
         android:text="Preis:"
         android:layout_width="wrap_content"
@@ -51,51 +51,51 @@
         android:layout_marginStart="0dp"
         android:id="@+id/Preis"
         android:layout_alignEnd="@+id/imageView"
-        android:textSize="25dp"/>
+        android:textSize="27dp"/>
     <TextView
         android:text="Quadratmeter:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="110dp"
         android:layout_marginStart="0dp"
         android:id="@+id/Quadratmeter"
         android:layout_alignEnd="@+id/imageView"
-        android:textSize="25dp"/>
+        android:textSize="27dp"/>
     <TextView
         android:text="Zimmer:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="140dp"
         android:layout_marginStart="0dp"
         android:id="@+id/Zimmer"
         android:layout_alignEnd="@+id/imageView"
-        android:textSize="25dp"/>
+        android:textSize="27dp"/>
     <TextView
         android:text="Adresse: "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="170dp"
         android:layout_marginStart="0dp"
         android:id="@+id/Adresse"
         android:layout_alignEnd="@+id/imageView"
-        android:textSize="25dp"/>
+        android:textSize="27dp"/>
     <TextView
         android:text="Parkplätze: "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="200dp"
         android:layout_marginStart="0dp"
         android:id="@+id/Parkplätze"
         android:layout_alignEnd="@+id/imageView"
-        android:textSize="25dp"/>
+        android:textSize="27dp"/>
 
 
     <RatingBar
@@ -106,8 +106,9 @@
         android:numStars="5"
         android:rating="0"
         android:stepSize="0.5"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="420dp"
         android:layout_marginStart="20dp"/>
+
 
     <Button
         android:text="Vergleichen"
@@ -139,9 +140,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
 
-    <include layout="@layout/menu_bar"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+    <include layout="@layout/menu_bar" />
 
 
 </RelativeLayout>

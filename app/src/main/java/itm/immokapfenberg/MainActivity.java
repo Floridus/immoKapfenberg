@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-<<<<<<< HEAD
+
         setContentView(R.layout.activity_one_view);
-=======
-        setContentView(R.layout.activity_main);
+
+       /* setContentView(R.layout.activity_main);
 
         String[] items = {
                 "High-Tech-Park Kapfenberg",
@@ -41,6 +41,6 @@ public class MainActivity extends AppCompatActivity {
         //adapter = new ArrayAdapter<String>(this, R.layout.list_view, R.id.mainName, itemList);
 
         listView.setAdapter(adapter);
->>>>>>> c285c6b3272896e2175582e2defb501ea3ce5bcf
+*/
     }
 }
