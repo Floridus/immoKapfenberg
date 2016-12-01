@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ImmoKapfenberg</string>
+
+    <string name="contact_title">Contact</string>
+    <string name="contact_number">0664 12345678</string>
+    <string name="contact_name">Name</string>
+    <string name="contact_email">E-Mail</string>
+    <string name="contact_subject">Subject</string>
+    <string name="contact_info">Further information</string>
+    <string name="cancel">Cancel</string>
+    <string name="send">Send</string>
 </resources>
