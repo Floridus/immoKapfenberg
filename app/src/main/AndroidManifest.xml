@@ -15,8 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Contact"></activity>
-        <activity android:name=".OneViewActivity"></activity>
+        <activity android:name=".Contact" />
+        <activity android:name=".OneViewActivity" />
+        <activity android:name=".Initiative"></activity>
     </application>
 
 </manifest>
