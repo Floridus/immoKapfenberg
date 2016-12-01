@@ -1,0 +1,36 @@
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/activity_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="65dp" >
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/topNavMenu"
+        layout="@layout/menu_bar"/>
+
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffeeeeee"
+        android:gravity="end"
+        android:textSize="30sp"
+        android:layout_marginTop="65dp"
+        android:visibility="invisible" />
+</android.support.v4.widget.DrawerLayout>

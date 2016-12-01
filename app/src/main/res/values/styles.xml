@@ -12,7 +12,7 @@
         <item name="android:editTextColor">#444444</item>
         <item name="android:colorButtonNormal">#dddddd</item>
 
-        <item name="colorControlNormal">@color/colorLightGrey</item>
+        <item name="colorControlNormal">@color/colorSilver</item>
         <item name="colorControlActivated">@color/colorGold</item>
     </style>
 

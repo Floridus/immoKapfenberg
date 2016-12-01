@@ -1,9 +1,10 @@
-package itm.immokapfenberg;
+package itm.immokapfenberg.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Funding extends AppCompatActivity {
+import itm.immokapfenberg.R;
+
+public class FundingActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

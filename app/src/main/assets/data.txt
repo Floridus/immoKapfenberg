@@ -1,0 +1,3 @@
+High-Tech-Park Kapfenberg;img_high_tech_park;4;450000
+Schmiedgasse 2;img_schmiedgasse;3.5;50000
+Linke Mürzzeile 19 a;img_linke_muerzzeile;2;210000

@@ -1,6 +1,5 @@
-package itm.immokapfenberg;
+package itm.immokapfenberg.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,7 +8,9 @@ import android.widget.EditText;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Contact extends AppCompatActivity {
+import itm.immokapfenberg.R;
+
+public class ContactActivity extends BaseActivity {
 
     EditText inputName;
     EditText inputEmail;
@@ -29,7 +30,6 @@ public class Contact extends AppCompatActivity {
         inputEmail = (EditText) findViewById(R.id.emailInput);
         inputSubject = (EditText) findViewById(R.id.subjectInput);
         inputInfo = (EditText) findViewById(R.id.infoInput);
-
     }
 
     public boolean sendContactForm(View v){

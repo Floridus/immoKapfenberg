@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -9,33 +10,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="itm.immokapfenberg.MainActivity">
+    tools:context="itm.immokapfenberg.activity.MainActivity">
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <include
-            android:id="@+id/topNavMenu"
-            layout="@layout/menu_bar"/>
-
         <ListView
             android:id="@+id/immoList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/topNavMenu" />
+            android:layout_height="match_parent" />
 
     </TableLayout>
 
-    <ListView
-        android:id="@+id/navList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffeeeeee"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="55dp"
-        android:layoutDirection="rtl"
-        android:visibility="invisible"/>
-
-</android.support.v4.widget.DrawerLayout>
+</LinearLayout>

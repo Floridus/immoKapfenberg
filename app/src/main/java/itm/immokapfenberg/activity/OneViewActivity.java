@@ -1,14 +1,15 @@
-package itm.immokapfenberg;
+package itm.immokapfenberg.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.util.Log;
 import android.view.Window;
 import android.widget.Toast;
 
-public class OneViewActivity extends AppCompatActivity {
+import itm.immokapfenberg.R;
+
+public class OneViewActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +22,12 @@ public class OneViewActivity extends AppCompatActivity {
 
         Log.i("DEBUG Immo", "" + index);
     }
-    public void kontaktieren (View view){
+    public void kontaktieren(View view){
         Toast.makeText(this, "Kontakt", Toast.LENGTH_SHORT).show();
         startContact();
     }
     public void startContact() {
-        Intent intentContact =new Intent(this,Contact.class);
+        Intent intentContact =new Intent(this,ContactActivity.class);
         startActivity(intentContact);
     }
 }
