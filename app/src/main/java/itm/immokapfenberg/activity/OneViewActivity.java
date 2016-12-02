@@ -88,7 +88,7 @@ public class OneViewActivity extends BaseActivity {
                 if (isFavourite) {
                     isFavourite = false;
 
-                    favourites.remove(immoIndex);
+                    favourites.remove(Integer.valueOf(immoIndex));
                     favoriteStar.setImageResource(R.drawable.ic_star_inactive);
                 } else {
                     isFavourite = true;

@@ -46,6 +46,43 @@ public class FileHelper {
         return immos;
     }
 
+    public static ArrayList<Immovable> readAllFavourites(Context context, ArrayList<Integer> favourites){
+        ArrayList<Immovable> immos = new ArrayList();
+        String line = "";
+        int i = 0;
+
+        try {
+            InputStream inputStream = context.getAssets().open("data.txt");
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+            while ((line = bufferedReader.readLine()) != null) {
+                if (favourites.contains(i)) {
+                    String[] dataSet = line.split(";");
+                    String[] otherImgUrls = dataSet[4].split(",");
+
+                    Immovable immovable = new Immovable(
+                            dataSet[0],
+                            dataSet[1],
+                            Float.parseFloat(dataSet[2]),
+                            Float.parseFloat(dataSet[3]),
+                            otherImgUrls
+                    );
+                    immos.add(immovable);
+                }
+                i++;
+            }
+            inputStream.close();
+            bufferedReader.close();
+        } catch(FileNotFoundException ex) {
+            Log.d(TAG, ex.getMessage());
+        } catch(IOException ex) {
+            Log.d(TAG, ex.getMessage());
+        }
+
+        return immos;
+    }
+
     public static Immovable readOneById(Context context, int index){
         Immovable immo = new Immovable();
         String line = "";
