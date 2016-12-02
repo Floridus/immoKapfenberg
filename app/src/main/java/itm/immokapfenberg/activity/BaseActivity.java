@@ -69,6 +69,8 @@ public class BaseActivity extends AppCompatActivity {
 
         if (index == 0) {
             intent.setClass(this, MainActivity.class);
+        } else if (index == 1){
+            intent.setClass(this, WatchListActivity.class);
         } else if (index == 2){
             intent.setClass(this, InitiativeActivity.class);
         } else if (index == 3){

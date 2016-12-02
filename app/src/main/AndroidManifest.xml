@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_app"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -21,6 +21,7 @@
         <activity android:name=".activity.OneViewActivity" />
         <activity android:name=".activity.InitiativeActivity" />
         <activity android:name=".activity.FundingActivity" />
+        <activity android:name=".activity.WatchListActivity" />
     </application>
 
 </manifest>
