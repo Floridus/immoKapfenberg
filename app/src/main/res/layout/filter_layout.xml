@@ -96,16 +96,16 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"/>
 
-
-    <RatingBar
-        android:id="@+id/ratingInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:numStars="5"
-        android:rating="1"
-        android:stepSize="1"/>
-
+    <LinearLayout>
+        <RatingBar
+            android:id="@+id/ratingInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:numStars="5"
+            android:rating="1"
+            android:stepSize="1"/>
+    </LinearLayout>
 
 
     <TextView
