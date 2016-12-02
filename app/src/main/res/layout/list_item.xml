@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:layout_gravity="center"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="15dp"
         android:background="@android:color/holo_green_light"
         android:layout_below="@+id/ratingBar"
         android:layout_alignParentStart="true" />
@@ -48,11 +48,22 @@
         android:layout_alignParentStart="true" />
 
     <TextView
+        android:id="@+id/airDistance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="28sp"
+        android:paddingTop="20dp"
+        android:text="5 km Luftdistanz"
+        android:textColor="@android:color/holo_blue_light"
+        android:textAlignment="textEnd"
+        android:layout_alignParentStart="true" />
+
+    <TextView
         android:id="@+id/price"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="28sp"
-        android:paddingTop="65dp"
+        android:paddingTop="0dp"
         android:text="100.000 €"
         android:textColor="@android:color/holo_green_light"
         android:textAlignment="textEnd"

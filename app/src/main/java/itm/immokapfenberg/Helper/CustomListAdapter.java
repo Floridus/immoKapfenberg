@@ -23,6 +23,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
     private final String[] imgUrl;
     private final Float[] rating;
     private final Float[] price;
+    private final Float[] distance;
 
     public CustomListAdapter(Activity context, String[] itemName, ArrayList<Immovable> immovables) {
         super(context, R.layout.list_item, itemName);
@@ -30,11 +31,13 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         ArrayList<String> imgUrls = new ArrayList();
         ArrayList<Float> ratings = new ArrayList();
         ArrayList<Float> prices = new ArrayList();
+        ArrayList<Float> distances = new ArrayList();
 
         for (Immovable immo: immovables) {
             imgUrls.add(immo.getImgUrl());
             ratings.add(immo.getRating());
             prices.add(immo.getPrice());
+            distances.add(immo.getDistance());
         }
 
         this.context = context;
@@ -42,6 +45,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         this.imgUrl = imgUrls.toArray(new String[0]);
         this.rating = ratings.toArray(new Float[0]);
         this.price = prices.toArray(new Float[0]);
+        this.distance = distances.toArray(new Float[0]);
     }
 
     public View getView(int position, View view, ViewGroup parent) {
@@ -52,6 +56,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         ImageView imageView = (ImageView) rowView.findViewById(R.id.image);
         RatingBar ratingValue = (RatingBar) rowView.findViewById(R.id.ratingBar);
         TextView priceTxt = (TextView) rowView.findViewById(R.id.price);
+        TextView distTxt = (TextView) rowView.findViewById(R.id.airDistance);
 
         NumberFormat formatter = NumberFormat.getCurrencyInstance();
         String moneyString = formatter.format(price[position]);
@@ -60,6 +65,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         txtTitle.setText(itemName[position]);
         ratingValue.setRating(rating[position]);
         priceTxt.setText(moneyString);
+        distTxt.setText(distance[position] + " km Luftdistanz");
 
         return rowView;
     };
