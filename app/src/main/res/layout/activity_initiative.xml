@@ -16,13 +16,13 @@
 
         <TextView
                 android:id="@+id/iniativeHead"
-                android:text="WIR HABEN RAUM FÜR IHRE IDEEN!"
+                android:text="@string/initiative_headline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp" />
 
         <TextView
-            android:text="Sie sind auf der Suche nach einer attraktiven Geschäfts-, Gastronomie- oder Bürofläche? Dann sind Sie in Kapfenberg genau richtig. Wir geben Ihren Ideen neuen Raum!" />
+            android:text="@string/initiative_intro" />
 
         <ImageView
             android:id="@+id/iniativeImg"
