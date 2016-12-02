@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EEE">
+
+
+    <TextView
+        android:id="@+id/filterText"
+        android:text="Nach welchen Kriterien wollen Sie die Immobilien filtern?"
+        android:textColor="#333"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/place"
+        android:text="Ort"
+        android:textColor="#333"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"/>
+
+
+    <CheckBox
+        android:id="@+id/redfeld"
+        android:text="Redfeld"
+        android:textColor="#333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"/>
+
+    <CheckBox
+        android:id="@+id/altstadt"
+        android:text="Altstadt"
+        android:textColor="#333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"/>
+
+    <CheckBox
+        android:id="@+id/hafendorf"
+        android:text="Hafendorf"
+        android:textColor="#333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"/>
+
+    <CheckBox
+        android:id="@+id/werkVI"
+        android:text="Werk VI"
+        android:textColor="#333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"/>
+
+
+
+
+    <TextView
+        android:id="@+id/parking"
+        android:text="Mindestanzahl Parkplätze"
+        android:textColor="#333"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"/>
+
+    <SeekBar
+        android:id="@+id/parkingInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <TextView
+        android:id="@+id/rating"
+        android:text="Gesamtbewertung"
+        android:textColor="#333"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"/>
+
+    <LinearLayout>
+        <RatingBar
+            android:id="@+id/ratingInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:numStars="5"
+            android:rating="1"
+            android:stepSize="1"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/infrastructure"
+        android:text="Anbindung an öffentliche Verkehrsmittel"
+        android:textColor="#333"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"/>
+
+
+    <RadioGroup
+        android:id="@+id/infrastructureInput">
+        <RadioButton
+            android:id="@+id/infrastructureInputLow"
+            android:text="Schlecht"
+            android:textColor="#333"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/infrastructureInputMedium"
+            android:text="Mittel"
+            android:textColor="#333"
+            />
+        <RadioButton
+            android:id="@+id/infrastructureInputHigh"
+            android:text="Gut"
+            android:textColor="#333"
+            />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/price"
+        android:text="Preis"
+        android:textColor="#333"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"/>
+
+    <SeekBar
+        android:id="@+id/priceInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/size"
+        android:text="Größe"
+        android:textColor="#333"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"/>
+
+    <SeekBar
+        android:id="@+id/sizeeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <TextView
+        android:id="@+id/etc"
+        android:text="Sonstiges"
+        android:textColor="#333"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"/>
+
+    <CheckBox
+        android:id="@+id/accessibilityInput"
+        android:text="Behindertengerecht"
+        android:textColor="#333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/dialogButtonCancel"
+            android:text="Cancel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.50" />
+
+        <Button
+            android:id="@+id/dialogButtonOK"
+            android:text="Okay"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.50" />
+    </LinearLayout>
+
+</TableLayout>
+</ScrollView>
