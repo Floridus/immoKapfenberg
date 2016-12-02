@@ -25,13 +25,23 @@ public class FileHelper {
             while ((line = bufferedReader.readLine()) != null) {
                 String[] dataSet = line.split(";");
                 String[] otherImgUrls = dataSet[4].split(",");
+                String infoText = "";
+
+                if (!dataSet[9].equals("null")) {
+                    infoText = dataSet[9];
+                }
 
                 Immovable immovable = new Immovable(
                         dataSet[0],
                         dataSet[1],
                         Float.parseFloat(dataSet[2]),
                         Float.parseFloat(dataSet[3]),
-                        otherImgUrls
+                        otherImgUrls,
+                        Integer.parseInt(dataSet[5]),
+                        Integer.parseInt(dataSet[6]),
+                        dataSet[7],
+                        Integer.parseInt(dataSet[8]),
+                        infoText
                 );
                 immos.add(immovable);
             }
@@ -60,13 +70,23 @@ public class FileHelper {
                 if (favourites.contains(i)) {
                     String[] dataSet = line.split(";");
                     String[] otherImgUrls = dataSet[4].split(",");
+                    String infoText = "";
+
+                    if (!dataSet[9].equals("null")) {
+                        infoText = dataSet[9];
+                    }
 
                     Immovable immovable = new Immovable(
                             dataSet[0],
                             dataSet[1],
                             Float.parseFloat(dataSet[2]),
                             Float.parseFloat(dataSet[3]),
-                            otherImgUrls
+                            otherImgUrls,
+                            Integer.parseInt(dataSet[5]),
+                            Integer.parseInt(dataSet[6]),
+                            dataSet[7],
+                            Integer.parseInt(dataSet[8]),
+                            infoText
                     );
                     immos.add(immovable);
                 }
@@ -104,6 +124,15 @@ public class FileHelper {
                     immo.setRating(Float.parseFloat(dataSet[2]));
                     immo.setPrice(Float.parseFloat(dataSet[3]));
                     immo.setOtherImgUrls(otherImgUrls);
+                    immo.setSquaremeter(Integer.parseInt(dataSet[5]));
+                    immo.setAmount(Integer.parseInt(dataSet[6]));
+                    immo.setAdress(dataSet[7]);
+                    immo.setParkingamount(Integer.parseInt(dataSet[8]));
+                    if (dataSet[9].equals("null")) {
+                        immo.setInfos("");
+                    } else {
+                        immo.setInfos(dataSet[9]);
+                    }
 
                     break;
                 }

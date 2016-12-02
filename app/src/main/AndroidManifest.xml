@@ -3,6 +3,7 @@
     package="itm.immokapfenberg">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -22,6 +23,7 @@
         <activity android:name=".activity.InitiativeActivity" />
         <activity android:name=".activity.FundingActivity" />
         <activity android:name=".activity.WatchListActivity" />
+        <activity android:name=".activity.QRScannerActivity" />
     </application>
 
 </manifest>
