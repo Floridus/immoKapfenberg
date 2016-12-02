@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -10,134 +10,133 @@
         android:text="Bürogebäude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView5"
+        android:id="@+id/immoName"
+        android:textStyle="bold"
         android:elegantTextHeight="false"
-        android:width="210dp"
-        android:textSize="35dp"
-        />
+        android:textSize="35sp" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/imageView"
-        android:layout_below="@+id/textView5"
-        android:layout_alignStart="@+id/textView5"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="6dp"
-        android:layout_alignEnd="@+id/textView5" />
+        android:id="@+id/immoImage"
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        app:srcCompat="@mipmap/img_high_tech_park" />
+
+    <LinearLayout
+        android:id="@+id/imageStepLayout"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:baselineAligned="true">
+
+    </LinearLayout>
 
     <TextView
-        android:text="Informationen:"
+        android:text="Informationen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="0dp"
-        android:id="@+id/Informationen"
-        android:layout_alignEnd="@+id/imageView"
-        android:textSize="30dp"/>
-    <TextView
-        android:text="Preis:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="80dp"
-        android:layout_marginStart="0dp"
-        android:id="@+id/Preis"
-        android:layout_alignEnd="@+id/imageView"
-        android:textSize="27dp"/>
-    <TextView
-        android:text="Quadratmeter:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="110dp"
-        android:layout_marginStart="0dp"
-        android:id="@+id/Quadratmeter"
-        android:layout_alignEnd="@+id/imageView"
-        android:textSize="27dp"/>
-    <TextView
-        android:text="Zimmer:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="140dp"
-        android:layout_marginStart="0dp"
-        android:id="@+id/Zimmer"
-        android:layout_alignEnd="@+id/imageView"
-        android:textSize="27dp"/>
-    <TextView
-        android:text="Adresse: "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="170dp"
-        android:layout_marginStart="0dp"
-        android:id="@+id/Adresse"
-        android:layout_alignEnd="@+id/imageView"
-        android:textSize="27dp"/>
-    <TextView
-        android:text="Parkplätze: "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="200dp"
-        android:layout_marginStart="0dp"
-        android:id="@+id/Parkplätze"
-        android:layout_alignEnd="@+id/imageView"
-        android:textSize="27dp"/>
+        android:id="@+id/infoHead"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"/>
 
+    <TableLayout
+        android:textAlignment="center">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:text="Preis: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/priceHead"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:text="100 €"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:id="@+id/priceInfo"
+                android:textSize="20sp"/>
+
+        </TableRow>
+
+        <TextView
+            android:text="m²:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/qmHead"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:text="Räume:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/roomsHead"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:text="Adresse: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addressHead"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:text="Parkplätze: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/parkingHead"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </TableLayout>
 
     <RatingBar
-        android:id="@+id/rb"
+        android:id="@+id/ratingResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:isIndicator="true"
-        android:numStars="5"
-        android:rating="0"
-        android:stepSize="0.5"
-        android:layout_marginTop="420dp"
-        android:layout_marginStart="20dp"/>
-
-
-    <Button
-        android:text="Vergleichen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rb"
-        android:layout_alignStart="@+id/Informationen"
-        android:id="@+id/Vergleichen"
-        android:onClick="kontaktieren"
-        tools:textSize="26sp"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="160dp"/>
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="0.5"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:isIndicator="true" />
 
-    <Button
-        android:text="Kontakt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Kontakt"
-        android:onClick="kontaktieren"
-        tools:textSize="50sp"
-        android:layout_alignBaseline="@+id/Vergleichen"
-        android:layout_alignBottom="@+id/Vergleichen"
-        android:layout_alignStart="@+id/Parkplätze" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center">
 
-    <ImageSwitcher
-        android:id="@+id/imageSwitcher1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        <Button
+            android:text="Kontaktieren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contact"
+            android:onClick="toContact"
+            tools:textSize="26sp" />
 
-</RelativeLayout>
+        <Button
+            android:text="Vergleichen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/compare"
+            tools:textSize="26sp"/>
+
+    </TableRow>
+
+</TableLayout>
 

@@ -12,14 +12,14 @@ import itm.immokapfenberg.R;
 
 public class ContactActivity extends BaseActivity {
 
-    EditText inputName;
-    EditText inputEmail;
-    EditText inputSubject;
-    EditText inputInfo;
-    String name;
-    String email;
-    String subject;
-    String info;
+    private EditText inputName;
+    private EditText inputEmail;
+    private EditText inputSubject;
+    private EditText inputInfo;
+    private String name;
+    private String email;
+    private String subject;
+    private String info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class ContactActivity extends BaseActivity {
 
         Log.i("Name", name);
 
-        if(name.isEmpty()){
+        if (name.isEmpty()){
             Log.e("Error", "No name entered.");
             return false;
         }

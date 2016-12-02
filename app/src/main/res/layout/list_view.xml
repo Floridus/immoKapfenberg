@@ -8,9 +8,11 @@
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="-40dp"
         android:contentDescription="Image"
+        android:scaleType="fitCenter"
         android:src="@mipmap/ic_couch" />
 
     <TextView
@@ -27,17 +29,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
-    <RatingBar
-        android:layout_height="wrap_content"
-        android:id="@+id/ratingBar"
-        style="@style/Widget.AppCompat.RatingBar.Indicator"
-        android:rating="4"
-        android:stepSize="0.5"
-        android:layout_width="wrap_content"
-        android:layout_below="@+id/image"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="26dp" />
-
     <View
         android:layout_width="match_parent"
         android:layout_height="5dp"
@@ -47,14 +38,26 @@
         android:layout_below="@+id/ratingBar"
         android:layout_alignParentStart="true" />
 
+    <RatingBar
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:rating="4"
+        android:stepSize="0.5"
+        android:layout_marginTop="111dp"
+        android:layout_alignTop="@+id/mainName"
+        android:layout_alignParentStart="true" />
+
     <TextView
         android:id="@+id/mainName"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="24sp"
         android:paddingTop="70dp"
+        android:textStyle="bold"
         android:text="Test"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="86dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
