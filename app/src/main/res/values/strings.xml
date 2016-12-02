@@ -97,15 +97,28 @@
         \n&#8226; Hilfe zur Erlangung von Förderungen von Bund und Land
     </string>
 
-    <!-- TODO: Als Tabelle formatieren -->
-    <string name="funding_properties_text">\n
-        Gelände	Gesamt	Verfügbar\n
-        Industrie- &amp; Gewerbepark IGK	120.000 m²	Vollauslastung\n
-        Werk VI Gelände	22.000 m²	Vollauslastung\n
-        Werk VI Straße Ost	55.000 m²	19.000 m²\n
-        Werk VI Straße West	16.000 m²	Vollauslastung\n
-        Arndorf Tragösser Straße	60.000 m²	32.200 m²\n
-        High-Tech-Park	230.000 m²	160.000 m²
-    </string>
+    <!-- Table -->
+    <string name="funding_table1.1">Gelände</string>
+    <string name="funding_table1.2">Gesamt</string>
+    <string name="funding_table1.3">Verfügbar</string>
+    <string name="funding_table2.1">Industrie- &amp; Gewerbepark IGK</string>
+    <string name="funding_table2.2">120.000 m²</string>
+    <string name="funding_table2.3">Vollauslastung</string>
+    <string name="funding_table3.1">Werk VI Gelände</string>
+    <string name="funding_table3.2">22.000 m²</string>
+    <string name="funding_table3.3">Vollauslastung</string>
+    <string name="funding_table4.1">Werk VI Straße Ost</string>
+    <string name="funding_table4.2">55.000 m²</string>
+    <string name="funding_table4.3">19.000 m²</string>
+    <string name="funding_table5.1">Werk VI Straße West</string>
+    <string name="funding_table5.2">16.000 m²</string>
+    <string name="funding_table5.3">Vollauslastung</string>
+    <string name="funding_table6.1">Arndorf Tragösser Straße</string>
+    <string name="funding_table6.2">60.000 m²</string>
+    <string name="funding_table6.3">32.200 m²</string>
+    <string name="funding_table7.1">High-Tech-Park</string>
+    <string name="funding_table7.2">230.000 m²</string>
+    <string name="funding_table7.3">160.000 m²</string>
+
 
 </resources>

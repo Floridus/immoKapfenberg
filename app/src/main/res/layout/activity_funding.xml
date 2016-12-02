@@ -39,12 +39,155 @@
             android:layout_height="wrap_content"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/iniative4"
-            android:text="@string/funding_properties_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp" />
+        <TableLayout
+            android:paddingTop="10dp"
+            android:layout_width="match_parent">
+                <TableRow>
+                        <TextView
+                            android:id="@+id/initiative4.1"
+                            android:text="@string/funding_table1.1"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.2"
+                            android:text="@string/funding_table1.2"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.3"
+                            android:text="@string/funding_table1.3"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                </TableRow>
+                <TableRow>
+                        <TextView
+                            android:id="@+id/initiative4.4"
+                            android:text="@string/funding_table2.1"
+                            android:maxWidth="50dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.5"
+                            android:text="@string/funding_table2.2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.6"
+                            android:text="@string/funding_table2.3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                </TableRow>
+                <TableRow>
+                        <TextView
+                            android:id="@+id/initiative4.7"
+                            android:text="@string/funding_table3.1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.8"
+                            android:text="@string/funding_table3.2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.9"
+                            android:text="@string/funding_table3.3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                </TableRow>
+                <TableRow>
+                        <TextView
+                            android:id="@+id/initiative4.10"
+                            android:text="@string/funding_table4.1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.11"
+                            android:text="@string/funding_table4.2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.12"
+                            android:text="@string/funding_table4.3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                </TableRow>
+                <TableRow>
+                        <TextView
+                            android:id="@+id/initiative4.13"
+                            android:text="@string/funding_table5.1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.14"
+                            android:text="@string/funding_table5.2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.15"
+                            android:text="@string/funding_table5.3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                </TableRow>
+                <TableRow>
+                        <TextView
+                            android:id="@+id/initiative4.16"
+                            android:text="@string/funding_table6.1"
+                            android:maxWidth="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.17"
+                            android:text="@string/funding_table6.2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.18"
+                            android:text="@string/funding_table6.3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                </TableRow>
+                <TableRow>
+                        <TextView
+                            android:id="@+id/initiative4.19"
+                            android:text="@string/funding_table7.1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.20"
+                            android:text="@string/funding_table7.2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/iniative4.21"
+                            android:text="@string/funding_table7.3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                </TableRow>
+        </TableLayout>
 
         <TextView
             android:id="@+id/iniative5"
