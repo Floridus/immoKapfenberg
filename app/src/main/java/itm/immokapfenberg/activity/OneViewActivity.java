@@ -40,6 +40,10 @@ public class OneViewActivity extends BaseActivity {
     private ImageView immoImage;
     private TextView immoName;
     private RatingBar ratingResult;
+    private TextView qmInfo;
+    private TextView amountInfo;
+    private TextView adressInfo;
+    private TextView parkingareaInfo;
 
     private LinearLayout imageStepLayout;
 
@@ -79,6 +83,10 @@ public class OneViewActivity extends BaseActivity {
         immoName = (TextView)findViewById(R.id.immoName);
         ratingResult = (RatingBar)findViewById(R.id.ratingResult);
         immoImage = (ImageView)findViewById(R.id.immoImage);
+        qmInfo = (TextView)findViewById(R.id.qmInfo);
+        amountInfo = (TextView)findViewById(R.id.amountInfo);
+        adressInfo = (TextView)findViewById(R.id.adressInfo);
+        parkingareaInfo = (TextView) findViewById(R.id.parkingareaInfo);
 
         favoriteStar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,6 +153,10 @@ public class OneViewActivity extends BaseActivity {
         immoName.setText(immovable.getName());
         priceInfo.setText(moneyString);
         ratingResult.setRating(immovable.getRating());
+        qmInfo.setText(immovable.getSquaremeter() + " m²");
+        amountInfo.setText(immovable.getAmount() + "");
+        adressInfo.setText(immovable.getAdress());
+        parkingareaInfo.setText(immovable.getParkingamount() + "");
 
         // Photoswipe is only active if there are more than one photo
         if (imgUrls.size() > 1) {

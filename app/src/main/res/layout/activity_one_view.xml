@@ -7,11 +7,13 @@
     android:layout_height="match_parent">
 
     <TableLayout
+
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TableRow
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAlignment="center">
@@ -34,6 +36,7 @@
         </TableRow>
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/immoImage"
             android:scaleType="fitCenter"
             android:layout_width="match_parent"
@@ -53,6 +56,7 @@
         </LinearLayout>
 
         <TextView
+
             android:text="Informationen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,7 +66,9 @@
             android:textSize="30sp"/>
 
         <TableLayout
-            android:textAlignment="center">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
             <TableRow
                 android:layout_width="match_parent"
@@ -88,49 +94,115 @@
 
             </TableRow>
 
-            <TextView
-                android:text="m²:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/qmHead"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
 
-            <TextView
-                android:text="Räume:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/roomsHead"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
 
-            <TextView
-                android:text="Adresse: "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/addressHead"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
+                <TextView
+                    android:text="m²:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/qmHead"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
 
-            <TextView
-                android:text="Parkplätze: "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/parkingHead"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
+                <TextView
+                    android:text="500 m²"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:id="@+id/qmInfo"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+
+                <TextView
+                    android:text="Räume:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roomsHead"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:text="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:id="@+id/amountInfo"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:textAlignment="center">
+
+                <TextView
+                    android:text="Adresse: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addressHead"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:text="Musterweg 1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/adressInfo"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+
+                <TextView
+                    android:text="Parkplätze: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parkingHead"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:text="12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parkingareaInfo"
+                    android:gravity="right"
+                    android:textSize="20sp"/>
+
+            </TableRow>
 
         </TableLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:textAlignment="center"/>
 
         <RatingBar
             android:id="@+id/ratingResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:numStars="5"
+            android:numStars="10"
             android:rating="3"
             android:stepSize="0.5"
-            style="@style/Widget.AppCompat.RatingBar.Indicator"
             android:isIndicator="true" />
 
         <TableRow

@@ -31,7 +31,12 @@ public class FileHelper {
                         dataSet[1],
                         Float.parseFloat(dataSet[2]),
                         Float.parseFloat(dataSet[3]),
-                        otherImgUrls
+                        otherImgUrls,
+                        Integer.parseInt(dataSet[5]),
+                        Integer.parseInt(dataSet[6]),
+                        dataSet[7],
+                        Integer.parseInt(dataSet[8])
+
                 );
                 immos.add(immovable);
             }
@@ -66,7 +71,11 @@ public class FileHelper {
                             dataSet[1],
                             Float.parseFloat(dataSet[2]),
                             Float.parseFloat(dataSet[3]),
-                            otherImgUrls
+                            otherImgUrls,
+                            Integer.parseInt(dataSet[5]),
+                            Integer.parseInt(dataSet[6]),
+                            dataSet[7],
+                            Integer.parseInt(dataSet[8])
                     );
                     immos.add(immovable);
                 }
@@ -104,6 +113,10 @@ public class FileHelper {
                     immo.setRating(Float.parseFloat(dataSet[2]));
                     immo.setPrice(Float.parseFloat(dataSet[3]));
                     immo.setOtherImgUrls(otherImgUrls);
+                    immo.setSquaremeter(Integer.parseInt(dataSet[5]));
+                    immo.setAmount(Integer.parseInt(dataSet[6]));
+                    immo.setAdress(dataSet[7]);
+                    immo.setParkingamount(Integer.parseInt(dataSet[8]));
 
                     break;
                 }
