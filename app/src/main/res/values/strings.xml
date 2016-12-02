@@ -44,12 +44,12 @@
 
     <!-- lists -->
     <string name="funding_philo_text">
-        Rechtzeitiger Ankauf von Grundstücken
-        Schaffung der rechtlichen Voraussetzungen
-        Konsequente Herstellung der erforderlichen Infrastruktur (Straßen, Strom, Gas, Wasser, Kanal, Beleuchtung, etc.)
-        Professionelle Akquisition
-        Aktive Begleitung der Investoren bei der Abwicklung des Vorhabens
-        Kreative Hilfestellung durch Experten der Stadt und des Bezirkes bei Problemlösungen
+        \n&#8226; Rechtzeitiger Ankauf von Grundstücken
+        \n&#8226; Schaffung der rechtlichen Voraussetzungen
+        \n&#8226; Konsequente Herstellung der erforderlichen Infrastruktur (Straßen, Strom, Gas, Wasser, Kanal, Beleuchtung, etc.)
+        \n&#8226; Professionelle Akquisition
+        \n&#8226; Aktive Begleitung der Investoren bei der Abwicklung des Vorhabens
+        \n&#8226; Kreative Hilfestellung durch Experten der Stadt und des Bezirkes bei Problemlösungen
      </string>
 
     <string name="funding_target1_list">
@@ -99,13 +99,13 @@
 
     <!-- TODO: Als Tabelle formatieren -->
     <string name="funding_properties_text">\n
-        &#8226; Gelände	Gesamt	Verfügbar\n
-        &#8226; Industrie- &amp; Gewerbepark IGK	120.000 m²	Vollauslastung\n
-        &#8226; Werk VI Gelände	22.000 m²	Vollauslastung\n
-        &#8226; Werk VI Straße Ost	55.000 m²	19.000 m²\n
-        &#8226; Werk VI Straße West	16.000 m²	Vollauslastung\n
-        &#8226; Arndorf Tragösser Straße	60.000 m²	32.200 m²\n
-        &#8226; High-Tech-Park	230.000 m²	160.000 m²
+        Gelände	Gesamt	Verfügbar\n
+        Industrie- &amp; Gewerbepark IGK	120.000 m²	Vollauslastung\n
+        Werk VI Gelände	22.000 m²	Vollauslastung\n
+        Werk VI Straße Ost	55.000 m²	19.000 m²\n
+        Werk VI Straße West	16.000 m²	Vollauslastung\n
+        Arndorf Tragösser Straße	60.000 m²	32.200 m²\n
+        High-Tech-Park	230.000 m²	160.000 m²
     </string>
 
 </resources>

@@ -25,7 +25,7 @@
 
         <TextView
             android:id="@+id/iniative2"
-            android:text="@string/funding_properties_text"
+            android:text="@string/funding_philo_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp" />
