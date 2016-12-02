@@ -24,6 +24,20 @@
         android:textAlignment="viewStart" />
 
     <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_filter"
+        android:id="@+id/searchFilter"
+        android:background="@android:color/holo_green_light"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_marginEnd="80dp" />
+
+    <ImageButton
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_menu"
@@ -31,7 +45,6 @@
         android:background="@android:color/holo_green_light"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:elevation="0dp"
         android:scaleType="fitXY"
         android:layout_alignBottom="@+id/toolbar"
         android:paddingRight="10dp" />

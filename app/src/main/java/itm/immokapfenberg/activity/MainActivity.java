@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -19,6 +20,8 @@ public class MainActivity extends BaseActivity {
     private CustomListAdapter adapter;
     private ListView listView;
 
+    private ImageButton searchFilter;
+
     private Intent oneViewIntent;
 
     @Override
@@ -28,6 +31,17 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         listView = (ListView)findViewById(R.id.immoList);
+
+        searchFilter = (ImageButton)findViewById(R.id.searchFilter);
+
+        searchFilter.setVisibility(View.VISIBLE);
+
+        searchFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         oneViewIntent = new Intent(this, OneViewActivity.class);
 
