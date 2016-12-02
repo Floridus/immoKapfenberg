@@ -6,14 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="Bürogebäude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/immoName"
-        android:textStyle="bold"
-        android:elegantTextHeight="false"
-        android:textSize="35sp" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center">
+
+        <TextView
+            android:text="Bürogebäude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/immoName"
+            android:textStyle="bold"
+            android:elegantTextHeight="false"
+            android:textSize="35sp" />
+
+    </TableRow>
 
     <ImageView
         android:id="@+id/immoImage"
@@ -21,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
-        app:srcCompat="@mipmap/img_high_tech_park" />
+        app:srcCompat="@mipmap/ic_couch" />
 
     <LinearLayout
         android:id="@+id/imageStepLayout"

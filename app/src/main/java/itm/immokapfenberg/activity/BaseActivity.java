@@ -7,14 +7,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.squareup.picasso.Picasso;
+
 import itm.immokapfenberg.R;
+import itm.immokapfenberg.helper.Constants;
 
 public class BaseActivity extends AppCompatActivity {
 
-    private ImageView menuButton;
+    private ImageButton menuButton;
+    private ImageView logo;
 
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
@@ -27,8 +32,11 @@ public class BaseActivity extends AppCompatActivity {
         super.setContentView(fullView);
 
         mDrawerList = (ListView)findViewById(R.id.navList);
+        logo = (ImageView)findViewById(R.id.logo);
 
-        menuButton = (ImageView)findViewById(R.id.menuButton);
+        Picasso.with(getApplicationContext()).load(Constants.LOGO_URL).into(logo);
+
+        menuButton = (ImageButton)findViewById(R.id.menuButton);
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
