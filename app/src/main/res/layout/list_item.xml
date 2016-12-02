@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="28sp"
-        android:paddingTop="70dp"
+        android:paddingTop="65dp"
         android:text="100.000 €"
         android:textColor="@android:color/holo_green_light"
         android:textAlignment="textEnd"

@@ -52,7 +52,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void addMenuItems() {
-        final String[] menuItems = { "Immobilien", "Merkliste", "Initiative", "Förderung", "Kontakt" };
+        final String[] menuItems = { "Immobilien", "Merkliste", "Initiative", "Förderung", "QR Code scannen", "Kontakt" };
         mAdapter = new ArrayAdapter<String>(this, R.layout.menu_text_view, menuItems);
         mDrawerList.setAdapter(mAdapter);
 
@@ -76,6 +76,8 @@ public class BaseActivity extends AppCompatActivity {
         } else if (index == 3){
             intent.setClass(this, FundingActivity.class);
         } else if (index == 4) {
+            intent.setClass(this, QRScannerActivity.class);
+        } else if (index == 5) {
             intent.setClass(this, ContactActivity.class);
         }
 
