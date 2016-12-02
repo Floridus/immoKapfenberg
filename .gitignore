@@ -49,15 +49,15 @@ captures/
 /build
 /captures
 .externalNativeBuild
-#.idea
-#.idea/workspace.xml
-#.idea/compiler.xml
-#.idea/gradle.xml
-#.idea/misc.xml
-#.idea/modules.xml
-#.idea/runConfigurations.xml
-#.idea/*.xml
-#.idea/copyright
-#.idea/copyright/profiles_settings.xml
+.idea
+.idea/workspace.xml
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/runConfigurations.xml
+.idea/*.xml
+.idea/copyright
+.idea/copyright/profiles_settings.xml
 
 
