@@ -72,7 +72,7 @@ public class MainActivity extends BaseActivity {
         searchFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dialog dialog = new Dialog(MainActivity.this);
+                final Dialog dialog = new Dialog(MainActivity.this);
                 dialog.setContentView(R.layout.filter_layout);
                 dialog.setTitle("Title...");
 
@@ -90,10 +90,12 @@ public class MainActivity extends BaseActivity {
                 View cancelButton = dialog.findViewById(R.id.dialogButtonCancel);
 
 
+
                 View.OnClickListener okListener = new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Log.i("INFO", "Okay button clicked");
+                        dialog.cancel();
                     }
                 };
 
@@ -101,6 +103,7 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void onClick(View v) {
                         Log.i("INFO", "Cancel button clicked");
+                        dialog.cancel();
                     }
                 };
 

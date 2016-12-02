@@ -22,7 +22,7 @@
 
     <TextView
         android:id="@+id/place"
-        android:text="Ort"
+        android:text="Gebiet"
         android:textColor="#333"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
@@ -143,7 +143,7 @@
 
     <TextView
         android:id="@+id/price"
-        android:text="Preis"
+        android:text="Höchstpreis"
         android:textColor="#333"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
@@ -155,12 +155,13 @@
     <SeekBar
         android:id="@+id/priceInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:progress="100"/>
 
 
     <TextView
         android:id="@+id/size"
-        android:text="Größe"
+        android:text="Mindestgröße in m^2"
         android:textColor="#333"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
@@ -203,14 +204,14 @@
         android:weightSum="1">
         <Button
             android:id="@+id/dialogButtonCancel"
-            android:text="Cancel"
+            android:text="Abbrechen"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_weight="0.50" />
 
         <Button
             android:id="@+id/dialogButtonOK"
-            android:text="Okay"
+            android:text="Suchen"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_weight="0.50" />
