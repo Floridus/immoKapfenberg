@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ImmoKapfenberg</string>
 
+    <!-- Contact form -->
     <string name="contact_title">Contact</string>
     <string name="contact_number">0664 12345678</string>
     <string name="contact_name">Name</string>
@@ -9,6 +10,8 @@
     <string name="contact_info">Further information</string>
     <string name="cancel">Cancel</string>
     <string name="send">Send</string>
+
+    <!-- Initiative  -->
     <string name="initiative_headline">WIR HABEN RAUM FÜR IHRE IDEEN!</string>
     <string name="initiative_intro">Sie sind auf der Suche nach einer attraktiven Geschäfts-, Gastronomie- oder Bürofläche? Dann sind Sie in Kapfenberg genau richtig. Wir geben Ihren Ideen neuen Raum!</string>
     <string name="initiative">Sie sind auf der Suche nach einer attraktiven Geschäfts-, Gastronomie- oder Bürofläche? Dann sind Sie in Kapfenberg genau richtig. Wir geben Ihren Ideen neuen Raum!\n\n
@@ -21,4 +24,88 @@
                 bzw. über Ihre Emails: \n
                 standortmanagement@kapfenberg.gv.at \n\n
             Das Team der Stabstelle Standortmanagement der Stadtgemeinde Kapfenberg.</string>
+
+
+    <!-- Funding -->
+    <!-- h1 -->
+    <string name="funding_philo_headline">Philosophie bei Betriebsansiedelung</string>
+    <string name="funding_enterprise_headline">Unternehmensförderung</string>
+    <string name="funding_city_headline">Innenstadtförderung</string>
+
+    <!-- h2 -->
+    <string name="funding_properties_headline">Grundstücke im Eigentum der Stadtgemeinde</string>
+    <string name="funding_kapfenberg_headline">Bekenntnis zu Kapfenberg als Wirtschafts- und Technologiestandort</string>
+    <string name="funding_city_development_headline">Bekenntnis zur vorrangigen Entwicklung der Innenstadt</string>
+
+    <!-- bold -->
+    <string name="funding_target">Zielsetzung</string>
+    <string name="funding_catalogue">Förderungskatalog</string>
+
+
+    <!-- lists -->
+    <string name="funding_philo_text">
+        Rechtzeitiger Ankauf von Grundstücken
+        Schaffung der rechtlichen Voraussetzungen
+        Konsequente Herstellung der erforderlichen Infrastruktur (Straßen, Strom, Gas, Wasser, Kanal, Beleuchtung, etc.)
+        Professionelle Akquisition
+        Aktive Begleitung der Investoren bei der Abwicklung des Vorhabens
+        Kreative Hilfestellung durch Experten der Stadt und des Bezirkes bei Problemlösungen
+     </string>
+
+    <string name="funding_target1_list">
+        \n&#8226; Ansiedelung und Gründung von Betrieben
+        \n&#8226; Qualifizierte Vergrößerung von bestehenden Betrieben
+        \n&#8226; Schaffung von neuen Arbeitsplätzen
+        \n&#8226; Sicherung bestehender Arbeitsplätze
+        \n&#8226; Ausbildung von Lehrlingen
+        \n&#8226; Emissionenreduktion
+        \n&#8226; Ausbau regionaler Wertschöpfung
+        \n&#8226; Absicherung Nahversorgung
+        \n&#8226; Konform mit EU-Wettbewerbsrecht
+    </string>
+
+    <string name="funding_catalogue1_list">
+        \n&#8226; Grundstücken mit moderner Infrastruktur zum geförderten Kaufpreis
+        \n&#8226; Arbeitsplatzprämie
+        \n&#8226; Lehrlingsprämie
+        \n&#8226; Investitionszuschuss
+        \n&#8226; Förderung von Abgaben
+        \n&#8226; Zuschuss zu Umweltschutz
+        \n&#8226; Unterstützung bei Projektabwicklung
+        \n&#8226; Hilfe zur Erlangung von Förderungen von Bund und Land
+    </string>
+    <string name="funding_target2_list">
+        \n&#8226; Stärkung der Investitionstätigkeit
+        \n&#8226; Sanierung bestehender Gebäude
+        \n&#8226; Schaffung hochwertiger Wohnungen
+        \n&#8226; Erhaltung und Schaffung von Betrieben
+        \n&#8226; Belebung durch verstärkte Veranstaltungen
+        \n&#8226; Ausbau der innerstädtischen Infrastruktur
+        \n&#8226; Verschönerung der Innenstadt
+        \n&#8226; Attraktivierung des Stadtbildes
+        \n&#8226; Konform mit EU-Wettbewerbsrecht
+    </string>
+
+    <string name="funding_catalogue2_list">
+        \n&#8226; Grundstücke zum geförderten Kaufpreis
+        \n&#8226; Moderne Infrastruktur
+        \n&#8226; Zuschuss zu Investitionen
+        \n&#8226; Förderung von Abgaben
+        \n&#8226; Wiedereröffnungsprämie
+        \n&#8226; Mietenstützung
+        \n&#8226; Unterstützung bei Projektabwicklung
+        \n&#8226; Hilfe zur Erlangung von Förderungen von Bund und Land
+    </string>
+
+    <!-- TODO: Als Tabelle formatieren -->
+    <string name="funding_properties_text">\n
+        &#8226; Gelände	Gesamt	Verfügbar\n
+        &#8226; Industrie- &amp; Gewerbepark IGK	120.000 m²	Vollauslastung\n
+        &#8226; Werk VI Gelände	22.000 m²	Vollauslastung\n
+        &#8226; Werk VI Straße Ost	55.000 m²	19.000 m²\n
+        &#8226; Werk VI Straße West	16.000 m²	Vollauslastung\n
+        &#8226; Arndorf Tragösser Straße	60.000 m²	32.200 m²\n
+        &#8226; High-Tech-Park	230.000 m²	160.000 m²
+    </string>
+
 </resources>
