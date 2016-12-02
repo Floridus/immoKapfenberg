@@ -11,8 +11,9 @@ public class Immovable {
     private int amount;
     private String adress;
     private int parkingamount;
+    private String infos;
 
-    public Immovable(String name, String imgUrl, float rating, float price, String[] otherImgUrls, int squaremeter, int amount, String adress, int parkingamount) {
+    public Immovable(String name, String imgUrl, float rating, float price, String[] otherImgUrls, int squaremeter, int amount, String adress, int parkingamount, String infos) {
         this.name = name;
         this.imgUrl = imgUrl;
         this.rating = rating;
@@ -22,6 +23,7 @@ public class Immovable {
         this.amount = amount;
         this.adress = adress;
         this.parkingamount = parkingamount;
+        this.infos=infos;
     }
 
     public Immovable() {}
@@ -52,6 +54,8 @@ public class Immovable {
 
     public int getParkingamount() {return parkingamount;}
 
+    public String getInfos() {return infos; }
+
     public String[] getOtherImgUrls() {
         return this.otherImgUrls;
     }
@@ -81,6 +85,8 @@ public class Immovable {
     public void setAdress(String adress) {this.adress = adress; }
 
     public void setParkingamount(int parkingamount) {this.parkingamount = parkingamount; }
+
+    public void setInfos(String infos) {this.infos = infos; }
 
     public void setOtherImgUrls(String[] otherImgUrls) {
         this.otherImgUrls = otherImgUrls;

@@ -25,6 +25,11 @@ public class FileHelper {
             while ((line = bufferedReader.readLine()) != null) {
                 String[] dataSet = line.split(";");
                 String[] otherImgUrls = dataSet[4].split(",");
+                String infoText = "";
+
+                if (!dataSet[9].equals("null")) {
+                    infoText = dataSet[9];
+                }
 
                 Immovable immovable = new Immovable(
                         dataSet[0],
@@ -35,8 +40,8 @@ public class FileHelper {
                         Integer.parseInt(dataSet[5]),
                         Integer.parseInt(dataSet[6]),
                         dataSet[7],
-                        Integer.parseInt(dataSet[8])
-
+                        Integer.parseInt(dataSet[8]),
+                        infoText
                 );
                 immos.add(immovable);
             }
@@ -65,6 +70,11 @@ public class FileHelper {
                 if (favourites.contains(i)) {
                     String[] dataSet = line.split(";");
                     String[] otherImgUrls = dataSet[4].split(",");
+                    String infoText = "";
+
+                    if (!dataSet[9].equals("null")) {
+                        infoText = dataSet[9];
+                    }
 
                     Immovable immovable = new Immovable(
                             dataSet[0],
@@ -75,7 +85,8 @@ public class FileHelper {
                             Integer.parseInt(dataSet[5]),
                             Integer.parseInt(dataSet[6]),
                             dataSet[7],
-                            Integer.parseInt(dataSet[8])
+                            Integer.parseInt(dataSet[8]),
+                            infoText
                     );
                     immos.add(immovable);
                 }
@@ -117,6 +128,11 @@ public class FileHelper {
                     immo.setAmount(Integer.parseInt(dataSet[6]));
                     immo.setAdress(dataSet[7]);
                     immo.setParkingamount(Integer.parseInt(dataSet[8]));
+                    if (dataSet[9].equals("null")) {
+                        immo.setInfos("");
+                    } else {
+                        immo.setInfos(dataSet[9]);
+                    }
 
                     break;
                 }
