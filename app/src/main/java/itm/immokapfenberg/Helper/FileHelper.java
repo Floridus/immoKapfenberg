@@ -42,7 +42,8 @@ public class FileHelper {
                         Integer.parseInt(dataSet[6]),
                         dataSet[7],
                         Integer.parseInt(dataSet[8]),
-                        infoText
+                        infoText,
+                        Float.parseFloat(dataSet[10])
                 );
                 immos.add(immovable);
             }
@@ -87,7 +88,8 @@ public class FileHelper {
                             Integer.parseInt(dataSet[6]),
                             dataSet[7],
                             Integer.parseInt(dataSet[8]),
-                            infoText
+                            infoText,
+                            Float.parseFloat(dataSet[10])
                     );
                     immos.add(immovable);
                 }
@@ -135,6 +137,7 @@ public class FileHelper {
                         String message = dataSet[9].replaceAll("<br>", "\n");
                         immo.setInfos(message);
                     }
+                    immo.setDistance(Float.parseFloat(dataSet[10]));
 
                     break;
                 }

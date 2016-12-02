@@ -14,6 +14,12 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.squareup.picasso.Picasso;
 
 import java.io.FileInputStream;
@@ -30,7 +36,9 @@ import itm.immokapfenberg.helper.FileHelper;
 import itm.immokapfenberg.helper.Immovable;
 import itm.immokapfenberg.helper.OnSwipeTouchListener;
 
-public class OneViewActivity extends BaseActivity {
+public class OneViewActivity extends BaseActivity implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
 
     private Immovable immovable;
     private int immoIndex;
@@ -159,7 +167,7 @@ public class OneViewActivity extends BaseActivity {
         amountInfo.setText(immovable.getAmount() + "");
         adressInfo.setText(immovable.getAdress());
         parkingareaInfo.setText(immovable.getParkingamount() + "");
-        infoText.setText(immovable.getInfos() + "");
+        infoText.setText(immovable.getInfos());
 
         // Photoswipe is only active if there are more than one photo
         if (imgUrls.size() > 1) {
@@ -193,6 +201,11 @@ public class OneViewActivity extends BaseActivity {
                 }
             });
         }
+
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
     public void toContact(View view) {
@@ -278,5 +291,24 @@ public class OneViewActivity extends BaseActivity {
         } else {
             view.setImageResource(R.drawable.ic_circle_inactive);
         }
+    }
+
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        LatLng kapfenberg = new LatLng(47.4535518, 15.3317351);
+        mMap.addMarker(new MarkerOptions().position(kapfenberg).title("FH JOANNEUM, Werk-VI-Straße, Kapfenberg, Österreich"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kapfenberg, 15));
     }
 }

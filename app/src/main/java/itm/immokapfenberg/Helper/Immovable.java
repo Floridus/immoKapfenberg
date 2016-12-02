@@ -12,8 +12,15 @@ public class Immovable {
     private String adress;
     private int parkingamount;
     private String infos;
+    private float distance;
 
-    public Immovable(String name, String imgUrl, float rating, float price, String[] otherImgUrls, int squaremeter, int amount, String adress, int parkingamount, String infos) {
+    public Immovable(
+            String name, String imgUrl,
+            float rating, float price,
+            String[] otherImgUrls, int squaremeter,
+            int amount, String adress,
+            int parkingamount, String infos,
+            float distance) {
         this.name = name;
         this.imgUrl = imgUrl;
         this.rating = rating;
@@ -23,7 +30,8 @@ public class Immovable {
         this.amount = amount;
         this.adress = adress;
         this.parkingamount = parkingamount;
-        this.infos=infos;
+        this.infos = infos;
+        this.distance = distance;
     }
 
     public Immovable() {}
@@ -60,6 +68,10 @@ public class Immovable {
         return this.otherImgUrls;
     }
 
+    public float getDistance() {
+        return this.distance;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -90,5 +102,9 @@ public class Immovable {
 
     public void setOtherImgUrls(String[] otherImgUrls) {
         this.otherImgUrls = otherImgUrls;
+    }
+
+    public void setDistance(float distance) {
+        this.distance = distance;
     }
 }

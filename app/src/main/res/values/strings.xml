@@ -119,22 +119,7 @@
     <string name="funding_table7.1">High-Tech-Park</string>
     <string name="funding_table7.2">230.000 m²</string>
     <string name="funding_table7.3">160.000 m²</string>
-
-
-
-
-    <!-- Filter -->
-    <string-array name="place_array">
-        <item>Malaysia</item>
-        <item>United States</item>
-        <item>Indonesia</item>
-        <item>France</item>
-        <item>Italy</item>
-        <item>Singapore</item>
-        <item>New Zealand</item>
-        <item>India</item>
-    </string-array>
-
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>

@@ -51,7 +51,6 @@
             android:layout_gravity="center"
             android:textAlignment="center"
             android:baselineAligned="true">
-
         </LinearLayout>
 
         <TextView
@@ -188,18 +187,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/parkingareaInfo"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:textSize="20sp"/>
 
             </TableRow>
 
         </TableLayout>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="1dp"
-            android:textAlignment="center"/>
 
         <LinearLayout
             android:layout_marginTop="20dp"
@@ -220,12 +213,20 @@
         </LinearLayout>
 
         <Button
-                android:text="Kontaktieren"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/contact"
-                android:onClick="toContact"
-                tools:textSize="26sp" />
+            android:text="Kontaktieren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contact"
+            android:onClick="toContact"
+            tools:textSize="26sp" />
+
+        <RelativeLayout
+            android:layout_marginTop="15dp" >
+            <include android:id="@+id/map"
+                layout="@layout/activity_maps"
+                android:layout_height="600dp"
+                android:layout_width="match_parent" />
+        </RelativeLayout>
 
     </TableLayout>
 
