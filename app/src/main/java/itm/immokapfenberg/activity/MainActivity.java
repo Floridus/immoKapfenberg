@@ -1,23 +1,16 @@
 package itm.immokapfenberg.activity;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Spinner;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import itm.immokapfenberg.R;
 import itm.immokapfenberg.helper.CustomListAdapter;
