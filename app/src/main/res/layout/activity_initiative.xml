@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_initiative"
     android:layout_width="match_parent"
@@ -11,10 +11,28 @@
     tools:context="itm.immokapfenberg.activity.InitiativeActivity">
 
     <TableLayout
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/iniativeHead"
+                android:text="WIR HABEN RAUM FÜR IHRE IDEEN!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp" />
+
+        <TextView
+            android:text="Sie sind auf der Suche nach einer attraktiven Geschäfts-, Gastronomie- oder Bürofläche? Dann sind Sie in Kapfenberg genau richtig. Wir geben Ihren Ideen neuen Raum!" />
+
+        <ImageView
+            android:id="@+id/iniativeImg"
+            android:scaleType="fitCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+
         <TextView android:text="@string/initiative" />
+
     </TableLayout>
 
-
-</TableLayout>
+</ScrollView>
