@@ -52,7 +52,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void addMenuItems() {
-        final String[] menuItems = { "Alle Immobilien", "Merkliste", "Initiative", "Förderung", "Kontakt" };
+        final String[] menuItems = { "Immobilien", "Merkliste", "Initiative", "Förderung", "Kontakt" };
         mAdapter = new ArrayAdapter<String>(this, R.layout.menu_text_view, menuItems);
         mDrawerList.setAdapter(mAdapter);
 

@@ -1,10 +1,14 @@
 package itm.immokapfenberg.activity;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -19,6 +23,8 @@ public class MainActivity extends BaseActivity {
     private CustomListAdapter adapter;
     private ListView listView;
 
+    private ImageButton searchFilter;
+
     private Intent oneViewIntent;
 
     @Override
@@ -28,6 +34,30 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         listView = (ListView)findViewById(R.id.immoList);
+
+        searchFilter = (ImageButton)findViewById(R.id.searchFilter);
+
+        searchFilter.setVisibility(View.VISIBLE);
+
+        searchFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Filter")
+                        .setMessage("This is a very fancy alert box.")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // continue with delete
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .show();
+            }
+        });
 
         oneViewIntent = new Intent(this, OneViewActivity.class);
 

@@ -25,7 +25,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
     private final Float[] price;
 
     public CustomListAdapter(Activity context, String[] itemName, ArrayList<Immovable> immovables) {
-        super(context, R.layout.list_view, itemName);
+        super(context, R.layout.list_item, itemName);
 
         ArrayList<String> imgUrls = new ArrayList();
         ArrayList<Float> ratings = new ArrayList();
@@ -46,7 +46,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
 
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        View rowView = inflater.inflate(R.layout.list_view, null, true);
+        View rowView = inflater.inflate(R.layout.list_item, null, true);
 
         TextView txtTitle = (TextView) rowView.findViewById(R.id.mainName);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.image);
