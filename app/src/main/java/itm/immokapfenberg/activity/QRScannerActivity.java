@@ -38,8 +38,11 @@ public class QRScannerActivity extends BaseActivity implements ZXingScannerView.
     @Override
     public void onPause() {
         super.onPause();
-        // Stop camera on pause
-        mScannerView.stopCamera();
+
+        if (mScannerView != null) {
+            // Stop camera on pause
+            mScannerView.stopCamera();
+        }
     }
 
     @Override

@@ -36,7 +36,6 @@
         </TableRow>
 
         <ImageView
-            android:visibility="gone"
             android:id="@+id/immoImage"
             android:scaleType="fitCenter"
             android:layout_width="match_parent"
@@ -56,7 +55,6 @@
         </LinearLayout>
 
         <TextView
-
             android:text="Informationen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -203,38 +201,31 @@
             android:layout_marginTop="1dp"
             android:textAlignment="center"/>
 
-        <RatingBar
-            android:id="@+id/ratingResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
             android:layout_marginTop="20dp"
-            android:numStars="10"
-            android:rating="3"
-            android:stepSize="0.5"
-            android:isIndicator="true" />
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:baselineAligned="true">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center">
+            <RatingBar
+                android:id="@+id/ratingResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="0.5"
+                android:isIndicator="true" />
 
-            <Button
+        </LinearLayout>
+
+        <Button
                 android:text="Kontaktieren"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/contact"
                 android:onClick="toContact"
                 tools:textSize="26sp" />
-
-            <Button
-                android:text="Vergleichen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/compare"
-                tools:textSize="26sp"/>
-
-        </TableRow>
 
     </TableLayout>
 

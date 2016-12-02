@@ -1,6 +1,7 @@
 package itm.immokapfenberg.helper;
 
 import android.content.Context;
+import android.text.Html;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -131,7 +132,8 @@ public class FileHelper {
                     if (dataSet[9].equals("null")) {
                         immo.setInfos("");
                     } else {
-                        immo.setInfos(dataSet[9]);
+                        String message = dataSet[9].replaceAll("<br>", "\n");
+                        immo.setInfos(message);
                     }
 
                     break;

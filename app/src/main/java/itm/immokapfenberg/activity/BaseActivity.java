@@ -34,6 +34,15 @@ public class BaseActivity extends AppCompatActivity {
         mDrawerList = (ListView)findViewById(R.id.navList);
         logo = (ImageView)findViewById(R.id.logo);
 
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
+                startActivity(intent);
+            }
+        });
+
         Picasso.with(getApplicationContext()).load(Constants.LOGO_URL).into(logo);
 
         menuButton = (ImageButton)findViewById(R.id.menuButton);
