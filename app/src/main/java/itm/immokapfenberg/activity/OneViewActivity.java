@@ -1,7 +1,11 @@
 package itm.immokapfenberg.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
@@ -12,6 +16,11 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.lang.reflect.Array;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 
@@ -24,13 +33,18 @@ import itm.immokapfenberg.helper.OnSwipeTouchListener;
 public class OneViewActivity extends BaseActivity {
 
     private Immovable immovable;
+    private int immoIndex;
 
+    private ImageView favoriteStar;
     private TextView priceInfo;
     private ImageView immoImage;
     private TextView immoName;
     private RatingBar ratingResult;
 
     private LinearLayout imageStepLayout;
+
+    private String favouriteString;
+    private boolean isFavourite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,17 +53,78 @@ public class OneViewActivity extends BaseActivity {
         setContentView(R.layout.activity_one_view);
 
         Intent i = getIntent();
-        int index = (int) i.getIntExtra("immoIndex", 0);
+        immoIndex = (int) i.getIntExtra("immoIndex", 0);
+
+        FileInputStream fis = null;
+        favouriteString = "";
+        try {
+            fis = openFileInput(Constants.STORAGE_FAVOURITE);
+            int c;
+            while ((c = fis.read()) != -1) {
+                favouriteString += Character.toString((char)c);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        isFavourite = searchIndexInFavourites(immoIndex);
 
         FileHelper fileHelper = new FileHelper();
-        immovable = fileHelper.readOneById(this, index);
+        immovable = fileHelper.readOneById(this, immoIndex);
 
+        favoriteStar = (ImageView)findViewById(R.id.favoriteStar);
         priceInfo = (TextView)findViewById(R.id.priceInfo);
         immoName = (TextView)findViewById(R.id.immoName);
         ratingResult = (RatingBar)findViewById(R.id.ratingResult);
         immoImage = (ImageView)findViewById(R.id.immoImage);
 
+        favoriteStar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList<Integer> favourites = splitFavouritesString();
+
+                if (isFavourite) {
+                    isFavourite = false;
+
+                    favourites.remove(immoIndex);
+                    favoriteStar.setImageResource(R.drawable.ic_star_inactive);
+                } else {
+                    isFavourite = true;
+
+                    favourites.add(immoIndex);
+                    favoriteStar.setImageResource(R.drawable.ic_star_active);
+                }
+
+                favouriteString = "";
+                for (int index: favourites) {
+                    if (!favouriteString.equals("")) {
+                        favouriteString += Constants.SEPERATOR;
+                    }
+                    favouriteString += index;
+                }
+
+                FileOutputStream fos = null;
+                try {
+                    fos = openFileOutput(Constants.STORAGE_FAVOURITE, Context.MODE_PRIVATE);
+                    fos.write(favouriteString.getBytes());
+                    fos.close();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
         setImage(immovable.getImgUrl());
+
+        if (isFavourite) {
+            favoriteStar.setImageResource(R.drawable.ic_star_active);
+        } else {
+            favoriteStar.setImageResource(R.drawable.ic_star_inactive);
+        }
 
         final ArrayList<String> imgUrls = new ArrayList<String>();
         imgUrls.add(immovable.getImgUrl());
@@ -105,10 +180,64 @@ public class OneViewActivity extends BaseActivity {
         }
     }
 
-    public void toContact(View view){
-        Toast.makeText(this, "Kontakt", Toast.LENGTH_SHORT).show();
+    public void toContact(View view) {
         Intent intentContact = new Intent(this, ContactActivity.class);
         startActivity(intentContact);
+    }
+
+    public void makeFavorite(View view) {
+        ArrayList<Integer> favourites = splitFavouritesString();
+
+        if (isFavourite) {
+            favourites.remove(immoIndex);
+            favoriteStar.setImageResource(R.drawable.ic_star_inactive);
+        } else {
+            favourites.add(immoIndex);
+            favoriteStar.setImageResource(R.drawable.ic_star_active);
+        }
+
+        isFavourite = !isFavourite;
+
+        favouriteString = "";
+        for (int index: favourites) {
+            if (!favouriteString.equals("")) {
+                favouriteString += Constants.SEPERATOR;
+            }
+            favouriteString += index;
+        }
+
+        FileOutputStream fos = null;
+        try {
+            fos = openFileOutput(Constants.STORAGE_FAVOURITE, Context.MODE_PRIVATE);
+            fos.write(favouriteString.getBytes());
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private ArrayList<Integer> splitFavouritesString() {
+        ArrayList<Integer> favourites = new ArrayList<Integer>();
+
+        if (favouriteString.contains(Constants.SEPERATOR) || favouriteString.length() > 0) {
+            for (String favourite : favouriteString.split(Constants.SEPERATOR)) {
+                favourites.add(Integer.parseInt(favourite));
+            }
+        }
+
+        return favourites;
+    }
+
+    private boolean searchIndexInFavourites(int index) {
+        ArrayList<Integer> favourites = splitFavouritesString();
+
+        if (favourites.size() > 0) {
+            return favourites.contains(index);
+        } else {
+            return false;
+        }
     }
 
     private void setImage(String url) {
